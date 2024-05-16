@@ -7,7 +7,7 @@ import org.junit.Test;
 public class RomanPrinterTest {
 
     @Test
-    public void testStampaFrom1To100() {
+    public void testStampaFrom1To500() {
         String printed1 = RomanPrinter.print(1);
         assertEquals("  _____ \n" + " |_   _|\n" + "   | |  \n" + "   | |  \n" + "  _| |_ \n" + " |_____|\n", printed1);
         String printed2 = RomanPrinter.print(2);
@@ -46,10 +46,20 @@ public class RomanPrinterTest {
         assertEquals(" __   __   _____   _____  __   __\n" + " \\ \\ / /  / ____| |_   _| \\ \\ / /\n" + "  \\ V /  | |        | |    \\ V / \n" + "   > <   | |        | |     > <  \n" + "  / . \\  | |____   _| |_   / . \\ \n" + " /_/ \\_\\  \\_____| |_____| /_/ \\_\\\n", printed99);
         String printed100 = RomanPrinter.print(100);
         assertEquals("   _____ \n" + "  / ____|\n" + " | |     \n" + " | |     \n" + " | |____ \n" + "  \\_____|\n", printed100);
+        String printed199 = RomanPrinter.print(199);
+        assertEquals("   _____  __   __   _____   _____  __   __\n" + "  / ____| \\ \\ / /  / ____| |_   _| \\ \\ / /\n" + " | |       \\ V /  | |        | |    \\ V / \n" + " | |        > <   | |        | |     > <  \n" + " | |____   / . \\  | |____   _| |_   / . \\ \n" + "  \\_____| /_/ \\_\\  \\_____| |_____| /_/ \\_\\\n", printed199);
+        String printed384 = RomanPrinter.print(384);
+        assertEquals("   _____    _____    _____   _       __   __ __   __ __   __  _____  __      __\n" + "  / ____|  / ____|  / ____| | |      \\ \\ / / \\ \\ / / \\ \\ / / |_   _| \\ \\    / /\n" + " | |      | |      | |      | |       \\ V /   \\ V /   \\ V /    | |    \\ \\  / / \n" + " | |      | |      | |      | |        > <     > <     > <     | |     \\ \\/ /  \n" + " | |____  | |____  | |____  | |____   / . \\   / . \\   / . \\   _| |_     \\  /   \n" + "  \\_____|  \\_____|  \\_____| |______| /_/ \\_\\ /_/ \\_\\ /_/ \\_\\ |_____|     \\/    \n", printed384);
+        String printed441 = RomanPrinter.print(441);
+        assertEquals("   _____   _____   __   __  _        _____ \n" + "  / ____| |  __ \\  \\ \\ / / | |      |_   _|\n" + " | |      | |  | |  \\ V /  | |        | |  \n" + " | |      | |  | |   > <   | |        | |  \n" + " | |____  | |__| |  / . \\  | |____   _| |_ \n" + "  \\_____| |_____/  /_/ \\_\\ |______| |_____|\n", printed441);
+        String printed499 = RomanPrinter.print(499);
+        assertEquals("   _____   _____   __   __   _____   _____  __   __\n" + "  / ____| |  __ \\  \\ \\ / /  / ____| |_   _| \\ \\ / /\n" + " | |      | |  | |  \\ V /  | |        | |    \\ V / \n" + " | |      | |  | |   > <   | |        | |     > <  \n" + " | |____  | |__| |  / . \\  | |____   _| |_   / . \\ \n" + "  \\_____| |_____/  /_/ \\_\\  \\_____| |_____| /_/ \\_\\\n", printed499);
+        String printed500 = RomanPrinter.print(500);
+        assertEquals("  _____  \n" + " |  __ \\ \n" + " | |  | |\n" + " | |  | |\n" + " | |__| |\n" + " |_____/ \n", printed500);
     }
     @Test
     public void testExceededLimit() {
-        String printed = RomanPrinter.print(101);
+        String printed = RomanPrinter.print(501);
         assertEquals(null, printed); 
     }
 
