@@ -6,11 +6,11 @@ package it.unipd.mtss;
 
 public class IntegerToRoman {
     public static String convert(int number){
-        if (number > 3) {
+        if (number > 6) {
             return null;
         }
-        int[] values = { 1 };
-        String[] romanLetters = { "I" };
+        int[] values = { 5, 4, 1 };
+        String[] romanLetters = { "V", "IV", "I" };
         String roman = "";
         for (int i = 0; i < values.length; i++) {
             while (number >= values[i]) {
