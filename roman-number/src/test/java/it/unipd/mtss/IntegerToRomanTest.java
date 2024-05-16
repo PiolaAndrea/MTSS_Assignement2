@@ -7,7 +7,7 @@ import org.junit.Test;
 public class IntegerToRomanTest {
 
     @Test
-    public void testNumeriFrom1To50() {
+    public void testNumeriFrom1To100() {
         String num1 = IntegerToRoman.convert(1);
         assertEquals("I", num1);
         String num2 = IntegerToRoman.convert(2);
@@ -40,10 +40,16 @@ public class IntegerToRomanTest {
         assertEquals("XLIX", num49);
         String num50 = IntegerToRoman.convert(50);
         assertEquals("L", num50);
+        String num76 = IntegerToRoman.convert(76);
+        assertEquals("LXXVI", num76);
+        String num99 = IntegerToRoman.convert(99);
+        assertEquals("XCIX", num99);
+        String num100 = IntegerToRoman.convert(100);
+        assertEquals("C", num100);
     }
     @Test
     public void testExceededLimit() {
-        String num = IntegerToRoman.convert(51);
+        String num = IntegerToRoman.convert(101);
         assertNull(num);
     }
 
