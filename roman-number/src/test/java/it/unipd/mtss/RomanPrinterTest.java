@@ -7,7 +7,7 @@ import org.junit.Test;
 public class RomanPrinterTest {
 
     @Test
-    public void testStampaFrom1To10() {
+    public void testStampaFrom1To20() {
         String printed1 = RomanPrinter.print(1);
         assertEquals("  _____ \n" + " |_   _|\n" + "   | |  \n" + "   | |  \n" + "  _| |_ \n" + " |_____|\n", printed1);
         String printed2 = RomanPrinter.print(2);
@@ -28,10 +28,16 @@ public class RomanPrinterTest {
         assertEquals("  _____  __   __\n" + " |_   _| \\ \\ / /\n" + "   | |    \\ V / \n" + "   | |     > <  \n" + "  _| |_   / . \\ \n" + " |_____| /_/ \\_\\\n", printed9);
         String printed10 = RomanPrinter.print(10);
         assertEquals(" __   __\n" + " \\ \\ / /\n" + "  \\ V / \n" + "   > <  \n" + "  / . \\ \n" + " /_/ \\_\\\n", printed10);
+        String printed14 = RomanPrinter.print(14);
+        assertEquals(" __   __  _____  __      __\n" + " \\ \\ / / |_   _| \\ \\    / /\n" + "  \\ V /    | |    \\ \\  / / \n" + "   > <     | |     \\ \\/ /  \n" + "  / . \\   _| |_     \\  /   \n" + " /_/ \\_\\ |_____|     \\/    \n", printed14);
+        String printed19 = RomanPrinter.print(19);
+        assertEquals(" __   __  _____  __   __\n" + " \\ \\ / / |_   _| \\ \\ / /\n" + "  \\ V /    | |    \\ V / \n" + "   > <     | |     > <  \n" + "  / . \\   _| |_   / . \\ \n" + " /_/ \\_\\ |_____| /_/ \\_\\\n", printed19);
+        String printed20 = RomanPrinter.print(20);
+        assertEquals(" __   __ __   __\n" + " \\ \\ / / \\ \\ / /\n" + "  \\ V /   \\ V / \n" + "   > <     > <  \n" + "  / . \\   / . \\ \n" + " /_/ \\_\\ /_/ \\_\\\n", printed20);
     }
     @Test
     public void testExceededLimit() {
-        String printed = RomanPrinter.print(11);
+        String printed = RomanPrinter.print(21);
         assertEquals(null, printed); 
     }
 
