@@ -7,7 +7,7 @@ import org.junit.Test;
 public class IntegerToRomanTest {
 
     @Test
-    public void testNumeriFrom1To500() {
+    public void testNumeriFrom1To1000() {
         String num1 = IntegerToRoman.convert(1);
         assertEquals("I", num1);
         String num2 = IntegerToRoman.convert(2);
@@ -56,10 +56,20 @@ public class IntegerToRomanTest {
         assertEquals("CDXCIX", num499);
         String num500 = IntegerToRoman.convert(500);
         assertEquals("D", num500);
+        String num665 = IntegerToRoman.convert(665);
+        assertEquals("DCLXV", num665);
+        String num777 = IntegerToRoman.convert(777);
+        assertEquals("DCCLXXVII", num777);
+        String num839 = IntegerToRoman.convert(839);
+        assertEquals("DCCCXXXIX", num839);
+        String num999 = IntegerToRoman.convert(999);
+        assertEquals("CMXCIX", num999);
+        String num1000 = IntegerToRoman.convert(1000);
+        assertEquals("M", num1000);
     }
     @Test
     public void testExceededLimit() {
-        String num = IntegerToRoman.convert(501);
+        String num = IntegerToRoman.convert(1001);
         assertNull(num);
     }
 
