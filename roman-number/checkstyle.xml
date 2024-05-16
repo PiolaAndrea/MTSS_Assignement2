@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC "-//Puppy Crawl//DTD Check Configuration 1.2//EN"
+"http://www.puppycrawl.com/dtds/configuration_1_2.dtd">
+<module name="Checker">
+  <module name="FileLength"/>
+  <module name="LineLength">
+    <property name="max" value="200"/>
+  </module>
+  <module name="FileTabCharacter"/>
+  <module name="Header">
+    <property name="header"
+      value="////////////////////////////////////////////////////////////////////\n// Matteo Squarzoni 2068240\n// Andrea Piola 2068241\n////////////////////////////////////////////////////////////////////\n"/>
+  </module>
+  <module name="TreeWalker">
+    <module name="BooleanExpressionComplexity"/>
+    <module name="CyclomaticComplexity">
+      <property name="max" value="15"/>
+    </module>
+    <module name="MethodLength">
+      <property name="max" value="100"/>
+    </module>
+    <module name="EmptyCatchBlock"/>
+    <module name="AvoidStarImport"/>
+    <module name="IllegalImport"/>
+    <module name="NeedBraces"/>
+  </module>
+</module>
