@@ -18,6 +18,7 @@ public class RomanPrinter {
             String[] ascii_X = {" __   __", " \\ \\ / /", "  \\ V / ", "   > <  ", "  / . \\ ", " /_/ \\_\\"};
             String[] ascii_L = {"  _      ", " | |     ", " | |     ", " | |     ", " | |____ ", " |______|"};
             String[] ascii_C = {"   _____ ", "  / ____|", " | |     ", " | |     ", " | |____ ", "  \\_____|"};
+            String[] ascii_D = {"  _____  ", " |  __ \\ ", " | |  | |", " | |  | |", " | |__| |", " |_____/ "};
             for (int i = 0; i < ascii_I.length; i++) {
                 for (int j = 0; j < romanNumber.length(); j++) {
                     switch (romanNumber.charAt(j)) {
@@ -40,6 +41,10 @@ public class RomanPrinter {
                     case 'C':
                         asciiNumber = asciiNumber+ascii_C[i];
                         System.out.print(ascii_C[i]);
+                        break;
+                    case 'D':
+                        asciiNumber = asciiNumber+ascii_D[i];
+                        System.out.print(ascii_D[i]);
                         break;
                     }
                 }
