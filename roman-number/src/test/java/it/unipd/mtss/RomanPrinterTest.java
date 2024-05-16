@@ -7,7 +7,7 @@ import org.junit.Test;
 public class RomanPrinterTest {
 
     @Test
-    public void testStampaFrom1To20() {
+    public void testStampaFrom1To50() {
         String printed1 = RomanPrinter.print(1);
         assertEquals("  _____ \n" + " |_   _|\n" + "   | |  \n" + "   | |  \n" + "  _| |_ \n" + " |_____|\n", printed1);
         String printed2 = RomanPrinter.print(2);
@@ -34,10 +34,16 @@ public class RomanPrinterTest {
         assertEquals(" __   __  _____  __   __\n" + " \\ \\ / / |_   _| \\ \\ / /\n" + "  \\ V /    | |    \\ V / \n" + "   > <     | |     > <  \n" + "  / . \\   _| |_   / . \\ \n" + " /_/ \\_\\ |_____| /_/ \\_\\\n", printed19);
         String printed20 = RomanPrinter.print(20);
         assertEquals(" __   __ __   __\n" + " \\ \\ / / \\ \\ / /\n" + "  \\ V /   \\ V / \n" + "   > <     > <  \n" + "  / . \\   / . \\ \n" + " /_/ \\_\\ /_/ \\_\\\n", printed20);
+        String printed33 = RomanPrinter.print(33);
+        assertEquals(" __   __ __   __ __   __  _____   _____   _____ \n" + " \\ \\ / / \\ \\ / / \\ \\ / / |_   _| |_   _| |_   _|\n" + "  \\ V /   \\ V /   \\ V /    | |     | |     | |  \n" + "   > <     > <     > <     | |     | |     | |  \n" + "  / . \\   / . \\   / . \\   _| |_   _| |_   _| |_ \n" + " /_/ \\_\\ /_/ \\_\\ /_/ \\_\\ |_____| |_____| |_____|\n", printed33);
+        String printed49 = RomanPrinter.print(49);
+        assertEquals(" __   __  _        _____  __   __\n" + " \\ \\ / / | |      |_   _| \\ \\ / /\n" + "  \\ V /  | |        | |    \\ V / \n" + "   > <   | |        | |     > <  \n" + "  / . \\  | |____   _| |_   / . \\ \n" + " /_/ \\_\\ |______| |_____| /_/ \\_\\\n", printed49);
+        String printed50 = RomanPrinter.print(50);
+        assertEquals("  _      \n" + " | |     \n" + " | |     \n" + " | |     \n" + " | |____ \n" + " |______|\n", printed50);
     }
     @Test
     public void testExceededLimit() {
-        String printed = RomanPrinter.print(21);
+        String printed = RomanPrinter.print(51);
         assertEquals(null, printed); 
     }
 
