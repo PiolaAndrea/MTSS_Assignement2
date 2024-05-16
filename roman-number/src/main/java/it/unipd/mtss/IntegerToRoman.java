@@ -6,7 +6,7 @@ package it.unipd.mtss;
 
 public class IntegerToRoman {
     public static String convert(int number){
-        if (number > 10) {
+        if (number > 20) {
             return null;
         }
         int[] values = { 10, 9, 5, 4, 1 };
